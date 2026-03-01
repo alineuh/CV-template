@@ -1,4 +1,4 @@
-# 📄 LaTeX CV Template – Two-Column Resume
+# LaTeX CV Template – Two-Column Resume
 
 A clean, professional two-column CV template built with LaTeX. Designed for engineering and tech profiles, with support for company/school logos, a circular profile photo, and a LinkedIn QR code.
 
@@ -6,7 +6,7 @@ A clean, professional two-column CV template built with LaTeX. Designed for engi
 
 ---
 
-## ✨ Features
+## Features
 
 - Two-column layout (Education & Skills | Professional Experience)
 - Company/school logos next to each entry
@@ -18,7 +18,7 @@ A clean, professional two-column CV template built with LaTeX. Designed for engi
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Option 1 – Overleaf (recommended, no install needed)
 1. Go to [overleaf.com](https://overleaf.com) and create a new **Blank Project**
@@ -34,7 +34,7 @@ Requires a full LaTeX installation (TeX Live or MiKTeX).
 
 ---
 
-## 📁 Required Files
+## Required Files
 
 | File | Description |
 |------|-------------|
@@ -47,7 +47,7 @@ Requires a full LaTeX installation (TeX Live or MiKTeX).
 
 ---
 
-## 🎨 Customization
+## Customization
 
 ### Change accent color
 Find this line in the preamble and edit the RGB values:
@@ -85,7 +85,7 @@ Find the `\logoentry` command definition and change `height=1.3cm`:
 
 ---
 
-## 📦 LaTeX Packages Used
+## LaTeX Packages Used
 
 All packages are available by default on Overleaf and in TeX Live:
 
@@ -93,6 +93,6 @@ All packages are available by default on Overleaf and in TeX Live:
 
 ---
 
-## 📝 License
+## License
 
-Free to use and adapt for personal use. A ⭐ on the repo is always appreciated!
+Free to use and adapt for personal use.

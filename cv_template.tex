@@ -1,0 +1,202 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[top=1cm, bottom=1cm, left=1.2cm, right=1.2cm]{geometry}
+\usepackage{array}
+\usepackage[dvipsnames,table]{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{paracol}
+\usepackage{microtype}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+% =============================================
+% ACCENT COLOR – change RGB values to your liking
+% Examples: blue (0,90,160) | green (40,120,70) | gray (60,60,60)
+% =============================================
+\definecolor{accentcolor}{RGB}{120, 47, 64}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\columnsep}{0.8cm}
+
+\titleformat{\section}
+  {\normalfont\normalsize\bfseries}
+  {}{0em}{\color{accentcolor}}
+  [\vspace{-2pt}\color{accentcolor}\rule{\linewidth}{0.6pt}\vspace{2pt}]
+\titlespacing{\section}{0pt}{6pt}{4pt}
+
+\newcommand{\cvitem}[1]{%
+  \begin{itemize}[leftmargin=1em, itemsep=0pt, topsep=1pt, parsep=0pt]
+    \small #1
+  \end{itemize}
+}
+
+% =============================================
+% LOGO ENTRY
+% Usage: \logoentry{logo_file.png}{Title | City}{Subtitle | Dates}
+% To resize all logos: change height=1.3cm below
+% =============================================
+\newcommand{\logoentry}[3]{%
+  \begin{minipage}[c]{0.18\linewidth}
+    \includegraphics[width=\linewidth,height=1.3cm,keepaspectratio]{#1}
+  \end{minipage}%
+  \hspace{5pt}%
+  \begin{minipage}[c]{0.78\linewidth}
+    {\small\bfseries #2}\\
+    {\footnotesize #3}
+  \end{minipage}%
+}
+
+\begin{document}
+
+% =============================================
+% HEADER
+% Replace with your own info
+% =============================================
+\begin{minipage}[c]{0.1\textwidth}
+  \includegraphics[width=\linewidth]{qr-code.png}
+  % Generate your LinkedIn QR code and save as qr-code.png
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.73\textwidth}
+  \begin{center}
+    {\LARGE\bfseries Firstname LASTNAME}\\[3pt]
+    {\small\itshape Your job title and a short intro sentence. Mention your experience level, main expertise, and what you are looking for.}\\[5pt]
+    \small
+    +XX X XX XX XX XX \quad
+    your.email@example.com \quad
+    \href{https://github.com/yourusername}{github.com/yourusername}
+  \end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.12\textwidth}
+  \begin{tikzpicture}
+    \clip (0,0) circle (1.3cm);
+    \node at (0,0.3) {\includegraphics[width=3cm]{photo.jpg}};
+    % Replace photo.jpg with your own square photo
+  \end{tikzpicture}
+\end{minipage}
+
+\vspace{2pt}
+{\color{accentcolor}\rule{\linewidth}{1pt}}
+\vspace{3pt}
+
+\setlength{\columnseprule}{0pt}
+\begin{paracol}{2}
+
+%========== LEFT COLUMN ==========%
+
+\section{Education}
+
+% --- Degree 1 ---
+\logoentry{school1_logo.png}{University or School Name | City}{Degree Title, Specialization | YYYY – YYYY}
+\cvitem{
+  \item Relevant coursework, specialization topics, or technologies studied.
+  \item \textbf{Key projects:} Project Name 1, Project Name 2, Project Name 3.
+}
+
+\vspace{4pt}
+% --- Exchange semester (optional) ---
+\logoentry{school2_logo.png}{Exchange University | City, Country}{Exchange Semester, Level | Month YYYY – Month YYYY \\ \textit{Notable ranking or distinction}}
+\cvitem{
+  \item Courses taken: Course 1, Course 2, Course 3, Language studied.
+}
+
+\vspace{4pt}
+% --- Degree 2 ---
+\logoentry{school3_logo.png}{University Name | City}{Bachelor's Degree in Field – Honours | YYYY – YYYY \\ \textit{Optional note, e.g. double major or specialization}}
+\cvitem{
+  \item \textbf{Key projects:} Project Name 1, Project Name 2.
+}
+
+\vspace{3pt}
+\section{Technical Skills}
+
+% Add or remove categories as needed. Bold your strongest skills.
+{\small
+\textbf{Programming:} \textbf{Language1}, \textbf{Language2}, Language3, Language4, Language5.\\[2pt]
+\textbf{Web \& Frontend:} \textbf{HTML}, \textbf{CSS}, Framework1, Framework2.\\[2pt]
+\textbf{Data \& ML:} Tool1, Tool2, Tool3.\\[2pt]
+\textbf{Domain:} Skill1, Skill2, \textbf{Skill3}.\\[2pt]
+\textbf{Other:} Git, Linux, Tool4.
+}
+
+\vspace{3pt}
+\section{Associations \& Hackathons}
+\cvitem{
+  \item Association Name – Role (e.g. Active member, President)
+  \item Hackathon Name – Year
+  \item Hackathon Name – Year
+}
+
+\vspace{3pt}
+\section{Soft Skills}
+{\small Skill1 · Skill2 · Skill3 · Skill4 · Skill5}
+
+\vspace{3pt}
+\section{Languages}
+{\small
+\textbf{Language1} – Native \quad \textbf{Language2} – Level/Score \quad \textbf{Language3} – Level
+}
+
+%========== RIGHT COLUMN ==========%
+\switchcolumn
+
+\section{Professional Experience}
+
+% --- Experience 1 (most recent) ---
+\logoentry{company1_logo.png}{Company or Institution Name | City, Country}{Job Title | Month YYYY – Month YYYY}
+
+\vspace{2pt}
+{\small Brief description of the role and main achievements. Keep it to 2–3 sentences, focusing on impact and technologies used.}
+
+\vspace{5pt}
+% --- Experience 2 ---
+\logoentry{company2_logo.png}{Company Name | City}{Job Title | Month YYYY – Month YYYY}
+
+\vspace{1pt}
+{\small\textbf{Category 1 (e.g. Risk Management):}}
+\cvitem{
+  \item Responsibility or achievement. Use \textbf{bold} to highlight key terms.
+  \item Responsibility or achievement involving a specific tool or methodology.
+  \item Quantified result if possible (e.g. reduced X by Y\%).
+  \item Cross-functional or international collaboration example.
+}
+
+{\small\textbf{Category 2 (e.g. Awareness \& Training):}}
+\cvitem{
+  \item Responsibility or achievement. Highlight \textbf{key actions}.
+  \item Responsibility or achievement.
+  \item Responsibility or achievement.
+}
+
+{\small\textbf{Category 3 (e.g. Coordination \& Governance):}}
+\cvitem{
+  \item Responsibility involving frameworks or standards (e.g. \textbf{ISO 27001}).
+  \item Tool or process you maintained or improved.
+  \item Stakeholder or cross-team coordination example.
+}
+
+\vspace{4pt}
+% --- Experience 3 ---
+\logoentry{company3_logo.png}{Company Name | City}{Internship Title | Month YYYY – Month YYYY}
+
+\vspace{2pt}
+{\small Brief description of internship tasks and skills applied. Mention technologies or tools used.}
+
+\vspace{3pt}
+\section{Interests}
+\cvitem{
+  \item Interest or hobby 1 (with any notable achievement).
+  \item Interest or hobby 2 (with any notable achievement).
+  \item Interest or hobby 3.
+  \item Interest or hobby 4.
+}
+
+\end{paracol}
+\end{document}

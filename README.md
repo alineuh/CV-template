@@ -2,7 +2,7 @@
 
 A clean, professional two-column CV template built with LaTeX. Designed for engineering and tech profiles, with support for company/school logos, a circular profile photo, and a LinkedIn QR code.
 
-![Preview](preview.png)
+![Preview](preview.jpg)
 
 ---
 
